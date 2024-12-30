@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consultores Disponíveis</title>
+    <link rel="stylesheet" href="../CSS/combate.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+    <script src="../JS/particulas.js" defer></script>
+    
+</head>
+<body>
+    <div id="particles-js"></div>
+
+    <header>
+        <nav>
+            <a href="index.html" aria-label="Página Inicial"><img src="../IMG/Logo10.png" alt="Logo da Empresa" class="logo" /></a>
+            <div class="nav-links" id="navLinks">
+                <button aria-label="Fechar menu" class="fa fa-times" onclick="hideMenu()"></button>
+                <ul>
+                    <li><a href="../HTML/primeiro.html" target="_blank"><b>PAGINAL INICIAL</b></a></li>
+                    <li><a href="../HTML/capacidade.html" target="_blank"><b>GESTÃO CAPACIDADE</b></a></li>
+                    <li><a href="../HTML/chamados.html" target="_blank"><b>GESTÃO DE CHAMADOS</b></a></li>
+                    <li><a href="demandas.html" target="_blank"><b>GESTÃO DEMANDAS & CONTRATOS</b></a></li>
+                    <li><a href="../HTML/sobre.html" target="_blank"><b>SOBRE</b></a></li>
+                </ul>
+            </div>
+            <button aria-label="Abrir menu" class="fa fa-bars" onclick="showMenu()"></button>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Consultores Disponíveis</h1>
+        <p style="text-align: center; font-size: 1.2em; color: #FFFFFF;">
+            Esta tabela mostra os consultores disponíveis, sua senioridade, a complexidade do trabalho que podem executar e o valor associado. Use os filtros para refinar a lista de consultores conforme necessário.
+        </p>
+        <div class="filters">
+            <label for="senioridade">Senioridade:</label>
+            <select id="senioridade">
+                <option value="">Todas</option>
+                <option value="Jr">Junior</option>
+                <option value="Pr">Pleno</option>
+                <option value="Sr">Sênior</option>
+                <option value="Ex">Especialista</option>
+                <option value="Bg">Beginners</option>
+            </select>
+
+            <label for="complexidade">Complexidade:</label>
+            <select id="complexidade">
+                <option value="">Todas</option>
+                <option value="N1">Nível 1</option>
+                <option value="N2">Nível 2</option>
+                <option value="N3">Nível 3</option>
+            </select>
+
+            <label for="custo">Custo Máximo:</label>
+            <input type="number" id="custo" placeholder="Valor em R$">
+
+            <button onclick="filtrarConsultores()">Filtrar</button>
+        </div>
+
+        <div class="table-container">
+            <table id="consultores-table">
+                <thead>
+                    <tr>
+                        <th>Consultor</th>
+                        <th>Senioridade</th>
+                        <th>Complexidade</th>
+                        <th>Valor</th>
+                    </tr>
+                </thead>
+                <tbody>
+                
+                </tbody>
+            </table>
+        </div>
+
+        <div class="container">
+        <h1>Ociosidade por Falta de Demanda</h1>
+        <p style="text-align: center; font-size: 1.2em; color: #FFFFFF;">
+            Este gráfico apresenta a ociosidade dos consultores devido à falta de demandas, representando as horas ociosas para cada consultor.
+        </p>
+        <canvas id="ociosidadeChart"></canvas>
+    </div>
+
+        <canvas id="bubbleChart"></canvas>
+    </main>
+    
+
+ <footer class="footer">
+    <p>© 2024 Gestão de Chamados. Todos os direitos reservados.</p>
+</footer>
+
+    <script src="../JS/combate.js"></script>
+  
+</body>
+</html>
+

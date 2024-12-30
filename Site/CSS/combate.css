@@ -1,0 +1,180 @@
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: auto; 
+    font-family: Arial, sans-serif;
+}
+
+body {
+    position: relative; 
+}
+
+
+header {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 20px 10%;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+.logo {
+    max-width: 100px;
+    height: auto;
+}
+
+.nav-links {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.nav-links ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-links ul li {
+    margin: 0 10px; /* Espaço entre os itens */
+}
+
+.nav-links ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+.nav-links ul li a:hover {
+    color: #009688;
+}
+
+/* Botões do Menu */
+.fa-bars, .fa-times {
+    display: none;
+    color: #fff;
+    font-size: 28px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+
+main {
+    padding-top: 120px; 
+    padding-bottom: 40px; 
+}
+
+
+
+#particles-js {
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; 
+    background-color: #333; 
+}
+
+
+main h1 {
+    text-align: center;
+    font-size: 2.5em;
+    color: #009688;
+    margin-bottom: 20px;
+}
+
+
+.filters {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.filters label {
+    font-weight: bold;
+}
+
+
+.table-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 100px; 
+    margin-bottom: 50px; 
+}
+
+
+#consultores-table {
+    width: 80%; 
+    border-collapse: collapse;
+    margin: 0 auto;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+#consultores-table th, #consultores-table td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: center;
+}
+
+#consultores-table th {
+    background-color: #009688;
+    color: white;
+}
+
+#consultores-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+#consultores-table tr:hover {
+    background-color: #ddd;
+}
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-top: 20px; 
+    margin-bottom: 50px; 
+}
+
+
+#ociosidadeChart {
+    background-color: #fff;
+    border: 2px solid #009688;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+    width: 80%; 
+    max-width: 800px;
+    margin: 0 auto; 
+}
+
+
+.footer {
+    background-color: #009688;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    width: 100%;
+    bottom: 0;
+}

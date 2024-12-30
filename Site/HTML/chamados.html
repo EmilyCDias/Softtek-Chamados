@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automatização e Aprimoramento do Fluxo de Gestão de Chamados</title>
+    <link rel="stylesheet" href="../CSS/chamados.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+    <script src="../JS/particulas.js"></script>
+</head>
+<body>
+
+
+    <div id="particles-js"></div>
+
+    <header>
+        <nav>
+            <a href="index.html" aria-label="Página Inicial"><img src="../IMG/Logo10.png" alt="Logo da Empresa" class="logo" /></a>
+            <div class="nav-links" id="navLinks">
+                <ul>
+                    <li><a href="../HTML/primeiro.html" target="_blank"><b>PÁGINA INICIAL</b></a></li>
+                    <li><a href="../HTML/capacidade.html" target="_blank"><b>GESTÃO CAPACIDADE</b></a></li>
+                    <li><a href="../HTML/chamados.html" target="_blank"><b>GESTÃO DE CHAMADOS</b></a></li>
+                    <li><a href="demandas.html" target="_blank"><b>GESTÃO DEMANDAS & CONTRATOS</b></a></li>
+                    <li><a href="../HTML/sobre.html" target="_blank"><b>SOBRE</b></a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    
+    <div class="container">
+        <!-- Classificação Automática de Chamados -->
+        <div class="card">
+            <h3>Classificação Automática de Chamados</h3>
+            <p>Utilize esta ferramenta para classificar automaticamente um chamado com base na sua descrição. O sistema usa técnicas de aprendizado de máquina para determinar a classificação mais apropriada.</p>
+            <input type="text" id="classificacaoInput" placeholder="Digite a descrição do chamado">
+            <button class="button" onclick="classificarChamado()">Classificar Chamado</button>
+            <p id="classificacaoResultado"></p>
+        </div>
+
+        <!-- Atribuição Inteligente -->
+        <div class="card">
+            <h3>Atribuição Inteligente de Chamados</h3>
+            <p>Esta funcionalidade atribui chamados aos consultores disponíveis de forma inteligente, com base na complexidade do chamado e na senioridade do consultor.</p>
+            <button class="button" onclick="atribuirChamado()">Atribuir Chamado</button>
+            <p id="atribuicaoResultado"></p>
+        </div>
+
+        <!-- Notificações -->
+        <div class="card">
+            <h3>Notificações Automáticas</h3>
+            <p>Envie notificações automáticas para a equipe e para os clientes quando o status de um chamado mudar ou quando forem necessárias atualizações.</p>
+            <button class="button" onclick="enviarNotificacao()">Enviar Notificação</button>
+            <p id="notificacaoResultado"></p>
+        </div>
+
+        <div class="card">
+            <h3>Lista de Chamados</h3>
+            <p>Abaixo está uma tabela com os chamados atuais, incluindo detalhes como ID, descrição, status e prioridade. Use essas informações para gerenciar o fluxo de trabalho da equipe.</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Descrição</th>
+                        <th>Status</th>
+                        <th>Prioridade</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>001</td>
+                        <td>Erro ao acessar o sistema</td>
+                        <td>Em andamento</td>
+                        <td>Alta</td>
+                    </tr>
+                    <tr>
+                        <td>002</td>
+                        <td>Problema de login</td>
+                        <td>Pendente</td>
+                        <td>Média</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+  
+        <div class="card">
+            <h3>Tendência de Chamados</h3>
+            <p>Visualize a tendência dos chamados ao longo do tempo com este gráfico interativo. Ele ajuda a identificar padrões e áreas que podem precisar de atenção adicional.</p>
+            <canvas id="chamadosChart"></canvas>
+        </div>
+    </div>
+
+
+    <footer class="footer">
+        <p>© 2024 Gestão de Chamados. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="../JS/chamados.js"></script>
+</body>
+</html>
+
